@@ -23,7 +23,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         /* Fetch data from API and refresh the TableView */
         
-        let urlString = "http://127.0.0.1:8080/api/get/products"
+        let urlString = "http://51.38.235.63/api/get/products"
         guard let url = URL(string: urlString) else { return }
         Alamofire.request(url, method: .get).responseJSON { (response) in
             

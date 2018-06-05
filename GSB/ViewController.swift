@@ -40,7 +40,7 @@ class ViewController: UIViewController {
                 "password" : passwordTextField.text,
             ]
             // Do fetch data from JSON API
-            let urlString = "http://127.0.0.1:8080/api/login"
+            let urlString = "http://51.38.235.63/api/login"
             guard let url = URL(string: urlString) else { return }
             Alamofire.request(url, method: .post, parameters: credentials, encoding: JSONEncoding.default)
                 .validate(statusCode: 200..<300)
