@@ -15,6 +15,9 @@
 		BE608F2420C422FA00AC93A1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE608F2320C422FA00AC93A1 /* MenuViewController.swift */; };
 		BE9D5F1420C616D600F5D141 /* ManufacturerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D5F1320C616D600F5D141 /* ManufacturerTableCell.swift */; };
 		BE9D5F1620C61AC800F5D141 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D5F1520C61AC800F5D141 /* Product.swift */; };
+		BE9D5F1820C676DA00F5D141 /* ExpenseReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D5F1720C676DA00F5D141 /* ExpenseReport.swift */; };
+		BE9D5F1A20C67ABA00F5D141 /* ExpenseReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D5F1920C67ABA00F5D141 /* ExpenseReportViewController.swift */; };
+		BE9D5F1C20C67B4A00F5D141 /* ExpenseReportTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D5F1B20C67B4A00F5D141 /* ExpenseReportTableCell.swift */; };
 		BEA8E25D20C54AFD00721976 /* ManufacturerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA8E25C20C54AFD00721976 /* ManufacturerViewController.swift */; };
 		BEA8E26020C5532B00721976 /* Manufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA8E25F20C5532B00721976 /* Manufacturer.swift */; };
 		BEE3EF9C20C3E1F80069C487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3EF9B20C3E1F80069C487 /* AppDelegate.swift */; };
@@ -58,6 +61,9 @@
 		BE608F2320C422FA00AC93A1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BE9D5F1320C616D600F5D141 /* ManufacturerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerTableCell.swift; sourceTree = "<group>"; };
 		BE9D5F1520C61AC800F5D141 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		BE9D5F1720C676DA00F5D141 /* ExpenseReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseReport.swift; sourceTree = "<group>"; };
+		BE9D5F1920C67ABA00F5D141 /* ExpenseReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseReportViewController.swift; sourceTree = "<group>"; };
+		BE9D5F1B20C67B4A00F5D141 /* ExpenseReportTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseReportTableCell.swift; sourceTree = "<group>"; };
 		BEA8E25C20C54AFD00721976 /* ManufacturerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerViewController.swift; sourceTree = "<group>"; };
 		BEA8E25F20C5532B00721976 /* Manufacturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manufacturer.swift; sourceTree = "<group>"; };
 		BEE3EF9820C3E1F80069C487 /* GSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +139,7 @@
 			children = (
 				BEA8E25F20C5532B00721976 /* Manufacturer.swift */,
 				BE9D5F1520C61AC800F5D141 /* Product.swift */,
+				BE9D5F1720C676DA00F5D141 /* ExpenseReport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +182,8 @@
 				BE0DB8C620C5FFFB00CF0E30 /* ProductViewController.swift */,
 				BE0DB8C820C6023900CF0E30 /* ProductTableCell.swift */,
 				BE9D5F1320C616D600F5D141 /* ManufacturerTableCell.swift */,
+				BE9D5F1920C67ABA00F5D141 /* ExpenseReportViewController.swift */,
+				BE9D5F1B20C67B4A00F5D141 /* ExpenseReportTableCell.swift */,
 			);
 			path = GSB;
 			sourceTree = "<group>";
@@ -418,7 +427,10 @@
 				BEE3EF9C20C3E1F80069C487 /* AppDelegate.swift in Sources */,
 				BEA8E25D20C54AFD00721976 /* ManufacturerViewController.swift in Sources */,
 				BE0DB8C920C6023900CF0E30 /* ProductTableCell.swift in Sources */,
+				BE9D5F1820C676DA00F5D141 /* ExpenseReport.swift in Sources */,
+				BE9D5F1C20C67B4A00F5D141 /* ExpenseReportTableCell.swift in Sources */,
 				BE9D5F1620C61AC800F5D141 /* Product.swift in Sources */,
+				BE9D5F1A20C67ABA00F5D141 /* ExpenseReportViewController.swift in Sources */,
 				BE0DB8C720C5FFFB00CF0E30 /* ProductViewController.swift in Sources */,
 				BE608F2420C422FA00AC93A1 /* MenuViewController.swift in Sources */,
 			);

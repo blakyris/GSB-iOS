@@ -46,7 +46,7 @@ class ManufacturerViewController: UIViewController, UITableViewDelegate, UITable
             } else {
                 let alert = UIAlertController(
                     title: "API Error",
-                    message: "Can't fecth data from Symfony API.",
+                    message: "Can't fetch data from Symfony API.",
                     preferredStyle: .alert
                 )
                 let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)

@@ -12,6 +12,7 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var manufacturerButton: UIButton!
     @IBOutlet weak var productButton: UIButton!
+    @IBOutlet weak var reportButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,10 @@ class MenuViewController: UIViewController {
     
     @IBAction func GoToProducts(_ sender: Any) {
         performSegue(withIdentifier: "productSegue", sender: self)
+    }
+    
+    @IBAction func GoToReports(_ sender: Any) {
+        performSegue(withIdentifier: "expenseReportSegue", sender: self)
     }
     
     override func didReceiveMemoryWarning() {

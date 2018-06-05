@@ -10,9 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    var products: [Product] = [Product]()
+class ExpenseReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var reports: [ExpenseReport] = [ExpenseReport]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,7 +23,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         /* Fetch data from API and refresh the TableView */
         
-        let urlString = "http://51.38.235.63/api/get/products"
+        let urlString = "http://51.38.235.63/api/get/expensereports"
         guard let url = URL(string: urlString) else { return }
         Alamofire.request(url, method: .get).responseJSON { (response) in
             
@@ -33,10 +33,9 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let json : JSON = JSON(response.result.value!)
                 var i: Int = 0
                 while i < 10 {
-                    self.products.append(Product.init(
-                        name: json[i]["name"].stringValue,
-                        manufacturer: json[i]["manufacturer"].stringValue,
-                        price: json[i]["price"].stringValue
+                    self.reports.append(ExpenseReport.init(
+                        reference: json[i]["reference"].stringValue,
+                        amount: json[i]["amount"].stringValue
                     ))
                     i = i + 1
                 }
@@ -55,17 +54,17 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         /* End fecth data */
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableCell", for: indexPath) as! ProductTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ExpenseReportTableCell", for: indexPath) as! ExpenseReportTableCell
         
-        cell.productName.text = products[indexPath.row].name
+        cell.reportDate.text = reports[indexPath.row].reference
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        return reports.count
     }
 }

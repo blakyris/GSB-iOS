@@ -120,6 +120,10 @@
                                 <state key="normal" title="Notes de frais">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="GoToReports:" destination="d18-lF-4uH" eventType="touchUpInside" id="cxW-p5-db7"/>
+                                    <segue destination="zZx-ft-PQt" kind="show" identifier="expenseReportSegue" id="zYl-hb-8oZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,6 +143,7 @@
                     <connections>
                         <outlet property="manufacturerButton" destination="GME-cb-gCS" id="6Ww-of-wa0"/>
                         <outlet property="productButton" destination="Krn-98-uPG" id="FWk-wS-wYI"/>
+                        <outlet property="reportButton" destination="rSB-Ua-Y79" id="Sb3-Go-gy3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfn-Gs-PVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,7 +249,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f2W-mP-jsd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Catalogue" id="Koj-3P-1Qf"/>
+                    <navigationItem key="navigationItem" title="Catalogue" id="Koj-3P-1Qf">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="TWT-N7-duX"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="kQA-SL-Muu" id="46N-AG-CHF"/>
                     </connections>
@@ -252,6 +259,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdf-yX-FWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2644" y="228.93553223388307"/>
+        </scene>
+        <!--Notes de frais-->
+        <scene sceneID="2FY-K8-OaX">
+            <objects>
+                <viewController id="QV5-6J-di9" customClass="ExpenseReportViewController" customModule="GSB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uId-DC-kqw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9JO-Xn-TOy">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseReportTableCell" id="B7l-xp-PXA" customClass="ExpenseReportTableCell" customModule="GSB" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B7l-xp-PXA" id="WES-We-GYS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Une note de frais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed8-GO-w7Y">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="reportDate" destination="Ed8-GO-w7Y" id="r1J-0z-eFW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3gg-Jy-XI3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notes de frais" id="py4-L3-kuR"/>
+                    <connections>
+                        <outlet property="tableView" destination="9JO-Xn-TOy" id="0PH-aj-tGd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LoJ-s6-LQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2644" y="948.57571214392806"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W5r-c0-Tat">
@@ -288,6 +343,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4X-cQ-ogG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1705" y="-448"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JPE-Pp-29k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zZx-ft-PQt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ehl-Fm-Vwe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QV5-6J-di9" kind="relationship" relationship="rootViewController" id="KUc-kN-h5S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaP-Q1-LCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="949"/>
         </scene>
     </scenes>
     <resources>
